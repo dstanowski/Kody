@@ -1,0 +1,95 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <title>Średnia ilość odsłon według dni tygodnia - bip.uml.lodz.pl, w okresie 2017.01.01-2017.06.13</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+     <style>
+    canvas {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    </style>
+	  <script>
+	/* global Chart */
+
+	'use strict';
+
+	window.chartColors = {
+	red: 'rgb(255, 99, 132)',
+	orange: 'rgb(255, 159, 64)',
+	yellow: 'rgb(255, 205, 86)',
+	green: 'rgb(75, 192, 192)',
+	blue: 'rgb(54, 162, 235)',
+	purple: 'rgb(153, 102, 255)',
+	grey: 'rgb(201, 203, 207)'
+	};
+
+
+
+	</script>
+</head>
+
+<body>
+    <div id="container" style="width: 75%;">
+        <canvas id="canvas"></canvas>
+    </div>
+    
+    <script>
+       
+        var color = Chart.helpers.color;
+        var barChartData = {
+            labels: ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"],
+            datasets: [{
+                label: 'Ilość odsłon',
+                backgroundColor: color(window.chartColors.blue).alpha(0.8).rgbString(),
+                borderColor: window.chartColors.blue,
+                borderWidth: 1,
+                data: [
+                   16576,16999,16143,15501,12714,3573,5033
+
+                ]
+            }]
+
+        };
+
+        window.onload = function() {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myBar = new Chart(ctx, {
+                type: 'bar',
+                data: barChartData,
+                options: {
+                    responsive: true,
+					
+					legend: {
+						display: false,
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+						fontSize: 16,
+                        text: 'Średnia ilość odsłon według dnia tygodnia - bip.uml.lodz.pl w okresie od 2017.01.01 do 2017.06.13'
+                    },
+					scales: {
+						 yAxes: [{
+							ticks: {
+							beginAtZero: true
+							}
+						}]
+						}
+                }
+            });
+
+        };
+
+
+ 
+
+    </script>
+	
+	
+</body>
+
+</html>

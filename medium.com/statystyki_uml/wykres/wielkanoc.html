@@ -1,0 +1,121 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <title>Ilość odsłon w okresie Wielkanocny, w porównaniu do średniej ilości odsłon - bip.uml.lodz.pl</title>
+    <script src="Chart.js/Chart.bundle.js"></script>
+    <script>
+	/* global Chart */
+
+	'use strict';
+
+	window.chartColors = {
+	red: 'rgb(255, 99, 132)',
+	orange: 'rgb(255, 159, 64)',
+	yellow: 'rgb(255, 205, 86)',
+	green: 'rgb(75, 192, 192)',
+	blue: 'rgb(54, 162, 235)',
+	purple: 'rgb(153, 102, 255)',
+	grey: 'rgb(201, 203, 207)'
+	};
+
+
+
+</script>
+    <style>
+    canvas {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="container" style="width: 75%;">
+        <canvas id="canvas"></canvas>
+    </div>
+    
+    <script>
+       
+        var color = Chart.helpers.color;
+        var barChartData = {
+            labels: ["2017-04-12","Wielki Czwartek","Wielki Piątek","Wielka Sobota","Wielkanoc","Poniedziałek Wielkanocny","2017-04-18"],
+            datasets: [{
+                label: 'Ilość odsłon',
+                backgroundColor: color(window.chartColors.blue).alpha(0.8).rgbString(),
+                borderColor: window.chartColors.blue,
+                borderWidth: 1,
+                data: [
+                15710,
+				13512,
+				8231,
+				1890,
+				2226,
+				4271,
+				18170
+
+			]},
+				{
+                label: 'Średnia ilość odsłon',
+                backgroundColor: color(window.chartColors.grey).alpha(0.5).rgbString(),
+                borderColor: window.chartColors.grey,
+                borderWidth: 1,
+                data: [
+				16142,	
+				15501,
+				12714,
+				3573,
+				5033,
+				16576,
+				16999
+
+				]
+            }
+			
+			]
+
+        };
+	
+
+        window.onload = function() {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myBar = new Chart(ctx, {
+                type: 'line',
+                data: barChartData,
+				
+                options: {
+                    responsive: true,
+					tooltips:{
+					enabled: false,
+					},
+					legend: {
+						position: 'top',
+                    },
+                    title: {
+                        display: true,
+						fontSize: 16,
+                        text: 'Ilość odsłon w okresie Wielkanocny, w porównaniu do średniej ilości odsłon - bip.uml.lodz.pl'
+                    },
+					scales: {
+						 yAxes: [{
+							ticks: {
+							beginAtZero: true
+							}
+						}]
+						}
+                }
+            });
+
+        };
+
+
+ 
+
+    </script>
+	
+	
+</body>
+
+</html>
