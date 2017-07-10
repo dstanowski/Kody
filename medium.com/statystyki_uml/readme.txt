@@ -1,4 +1,4 @@
-Pliki z danym
+Pliki z danymi
 https://dstanowski.github.io/other/medium.com/statystyki_uml/bip.uml.lodz.pl.xlsx
 https://dstanowski.github.io/other/medium.com/statystyki_uml/uml.lodz.pl.pdf
 
