@@ -1,10 +1,10 @@
 {
    "name": "Całość",
    "children": [
-    {"name": "Podstrony zwiazane z oferatmi pracy", "size": 167522},
-	{"name": "Informacje o przetargach", "size": 40197},
-    {"name": "Podstrony związane z UMŁ w tym informacje o komórkach organizacyjnych", "size": 305646},
-    {"name": "Informacje o sprawach realizowanych przez UMŁ", "size": 165438},
-    {"name": "Informacje dotyczące pracy Rady Miasta", "size": 41865}
+    {"name": "Oferty pracy", "size": 167522},
+	{"name": "Przetargi", "size": 40197},
+    {"name": "Podstrony związane z UMŁ", "size": 305646},
+    {"name": "Sprawy realizowane", "size": 165438},
+    {"name": "Praca Rady Miasta", "size": 41865}
    ]
   }
