@@ -8,3 +8,6 @@ https://dstanowski.github.io/other/medium.com/statystyki_uml/grupowanie/
 Strona z wykresem
 https://dstanowski.github.io/other/medium.com/statystyki_uml/wykres/tydzien.html
 https://dstanowski.github.io/other/medium.com/statystyki_uml/wykres/wiekanoc.html
+
+Wpis na medium.com
+https://medium.com/@dawid.stanowski/statystyki-465a90b2e102
